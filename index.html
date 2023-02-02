@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Landing Web site</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__main">
+                <div class="header__logo__item">
+                    <img src="./img/logo.png" alt="">
+                </div>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <ul class="header__list__list">
+                    <li class="header__list__itam"> <a data-goto=".moveToHero" href="#">Главная</a></li>
+                    <li class="header__list__itam"> <a data-goto=".moveToCourse" href="#">Курсы</a></li>
+                    <li class="header__list__itam"> <a data-goto=".moveToTable" href="#">Расписание</a></li>
+                    <li class="header__list__itam"> <a data-goto=".moveToTeachers" href="#">Преподаватели</a></li>
+                    <li class="header__list__itam"> <a data-goto=".moveToMail" href="#">Рассылка</a></li>
+                    <li class="header__list__itam"> <a data-goto=".moveToContacts" href="#">Контакты</a></li>
+                </ul>
+                <div class="header__btn">
+                    <button id="btn-cabinet" class="header__btn__item">Зайти в кабинет</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero moveToHero">
+            <div class="container">
+                <div class="hero__main">
+                    <div class="hero__title__container">
+                        <div class="hero__title">
+                            Первый курс <br> по компьютерной сборке
+                        </div>
+                    </div>
+                    <div class="hero__number__col">
+                        <div class="hero__numbers">
+                            <span class="days">18</span>
+                            <span class="hero__time">Дней</span>
+                        </div>
+                        <div class="hero__numbers">
+                            <span class="hours">18</span>
+                            <span class="hero__time">Часов</span>
+                        </div>
+                        <div class="hero__numbers">
+                            <span class="minutes">18</span>
+                            <span class="hero__time">Минут</span>
+                        </div>
+                        <div class="hero__numbers">
+                            <span class="seconds">18</span>
+                            <span class="hero__time">Секунд</span>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </section>
+        <!-- Modal window content here -->
+        <div class="modal-window-cab">
+            <div class="modal-window-content">
+                <button id="modal-close-cab"><img src="./img/close.svg" width="18" alt=""></button>
+                <span class="log-in" >Please Log-in </span>
+                <input type="email" id="modal-input1" placeholder="Email" >
+                <input type="password" id="modal-input2" placeholder="Password">
+                <div>
+                    <span class="register-here"> <a href="#">Register here </a></span>
+                </div>
+                <div class="open-close-btn">
+                    <button type="submit" id="send-btn">Send</button>
+                    <button type="reset" id="close-btn">Close</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-window-cab2">
+            <div class="modal-window-content2">
+                <button id="modal-close-cab2"><img src="./img/close.svg" width="18" alt=""></button>
+                <span class="fill-in">Please Fill in the Form to start the Course</span>
+                <input type="text" id="modal-input-order2" placeholder="Name">
+                <input type="text" id="modal-input-order2" placeholder="Surname">
+                <input type="tel" id="modal-input-order2" placeholder="+1 234 567890">
+                <input type="email" id="modal-input-order2" placeholder="Email">
+                <div class="submit-btn__main">
+                    <button type="submit" id="submit-btn">Submit</button>
+                </div>
+            </div>
+        </div>
+        <section class="data moveToCourse">
+            <div class="container ">
+                <div class="data__main__col">
+                    <div class="data__btn__main">
+                        <button id="btn-order" class="data__btn">Заказать курс</button>
+                    </div>
+                    <div class="data__student__main">
+                        <div class="data__student__text">
+                            <span class="student__text__text">Учеников всего:</span>
+                            <span class="student__num">200</span>
+                        </div>
+                        <div class="data__student__number">
+                            <span class="student__text">Успешно закончили курс:</span>
+                            <span class="student__num">190</span>
+                        </div>
+                    </div>
+                    <div class="data__money__main">
+                        <div class="data__student__money">
+                            <span class="student__text">Заработано учениками:</span>
+                            <span class="student__num">400 000&#8381</span>
+                        </div>
+                        <div >
+                            <input type="range" min="0" max="1000000" value="400000" id="rangeInput" oninput="updateTextInput(this.value);" >
+                        </div>
+                        <div class="data__money__money">
+                            <div class="data__money__item rangeValue">400000</div>
+                            <div class="data__money__item">1 000 000&#8381</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="what__doing moveToTable">
+            <div class="container">
+                <div class="what__doing__col">
+                    <div class="what__doing__computer">
+                        <div class="photo__rectangle">
+                            <img src="./img/Rectangle.png" alt="">
+                        </div>
+                        <div class="photo__computer">
+                            <img src="./img/computer.png" alt="">
+                        </div>
+                    </div>
+                    <div class="what__doing__text__main">
+                        <div class="what__doing__title">
+                            <h1>Чем мы занимаемся?</h1>
+                        </div>
+                        <div class="what__doing__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget neque, dignissim et feugiat elit augue in suspendisse egestas. Dictum vestibulum mi et sed nunc, orci fermentum vestibulum, morbi. Et neque, adipiscing sapien sem senectus praesent aenean consequat. Aenean facilisi turpis aliquet fringilla. Nunc sem felis sed interdum feugiat mattis elit, sollicitudin. Quam pharetra rhoncus risus, cursus id elementum aliquet. Nullam turpis arcu malesuada arcu interdum placerat nisi, lobortis. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fast__start reveal">
+                    <div class="fast__start__item">
+                        <img src="./img/Ellipse_1.png" alt="">
+                        <span class="start__title">Быстрый старт</span>
+                    </div>
+                    <div class="fast__student">
+                        <p>Больше 90% учеников прошли полный курс и смогли собрать свой первый компьютер</p>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress__main__col">
+                        <div class="progress__col">
+                            <div class="progress__item__one row__item ">
+                                <h2>100%</h2>
+                                <img src="./img/Rectangle7.png" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui.</p>
+                            </div>   
+                        </div>
+                        <div class="progress__col">
+                            <div class="progress__item__one row__item">
+                                <h2>75%</h2>
+                                <img src="./img/Rectangle8.png" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui.</p>
+                            </div>
+                        </div>                    
+                        <div class="progress__col">
+                            <div class="progress__item__one row__item">
+                                <h2>50%</h2>
+                                <img src="./img/Rectangle9.png" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui.</p>
+                            </div> 
+                        </div>                        
+                        <div class="progress__col">
+                            <div class="progress__item__one row__item">
+                                <h2>Total</h2>
+                                <img src="./img/Rectangle10.png" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui.</p>
+                            </div>
+                        </div>                     
+                                                
+                    </div>
+                </div>
+                <div class="get__job">
+                    <div class="get__job__main">
+                        <div class="get__job__text__main">
+                            Получите профессию прямо сейчас
+                        </div>
+                    </div>
+                    <div class="get__job__col">
+                        <div class="get__item__one">
+                            <div class="get__picture">
+                                <img src="./img/icon-1.png" alt="">
+                            </div>
+                            <div class="get__title">
+                                Только практические
+                                навыки в работе
+                            </div>
+                            <div class="get__job__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui.
+                            </div>
+                        </div>
+                        <div class="get__item__two">
+                            <div class="get__picture">
+                                <img src="./img/icon-2.png" alt="">
+                            </div>
+                            <div class="get__title">
+                                Работа на самом
+                                современном оборудовании
+                            </div>
+                            <div class="get__job__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui.
+                            </div>
+                        </div>
+                        <div class="get__item__three">
+                            <div class="get__picture">
+                                <img src="./img/icon-3.png" alt="">
+                            </div>
+                            <div class="get__title">
+                                Сертификация
+                                по окончании обучения
+                            </div>
+                            <div class="get__job__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="brand">
+                    <div class="brand__main">
+                        <img src="./img/Ellipse2.png" alt="">
+                        <span class="brand__text" >Партнеры - топовые бренды</span>
+                    </div>
+                    <div class="sponsors">
+                        <div class="sponsors__main">
+                            <div class="sponsors__item">
+                                <img class="grid__item1" src="./img/logomsi.png" alt="">
+                                <img class="grid__item1" src="./img/logomsi.png" alt="">
+                                <img class="grid__item1" src="./img/logomsi.png" alt="">
+                                <img class="grid__item3" src="./img/logomsi.png" alt="">
+                                <img class="grid__item" src="./img/logomsi.png" alt="">
+                                <img class="grid__item" src="./img/logomsi.png" alt="">
+                                <img class="grid__item" src="./img/logomsi.png" alt="">
+                                <img class="grid__item2" src="./img/logomsi.png" alt="">
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                <div class="study__program moveToTeachers">
+                    <div class="study__main">
+                        <div class="study__body">
+                            <img src="./img/Ellipse3.png" alt="">
+                        </div>
+                        <div class="study__title">
+                            <h2>Программа обучения</h2>
+                        </div>
+                        <div class="study__text">
+                            <p>Больше 90% учеников прошли полный курс и смогли собрать свой первый компьютер</p>
+                        </div>
+                    </div>
+                    <div class="study__col">
+                        <div class="study__col__main">
+                            <div class="main__col__element">
+                                <img src="./img/timeline.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="study__weeks">
+                        <div class="study__weeks__col">
+                            <div class="study__weeks__item1">
+                                <div class="week__item1">
+                                    Неделя №1
+                                </div>
+                                <span class="week__line1"></span>
+                                <div class="week__desc">
+                                    Красивая часть курса,
+                                    которая помогает в успехе
+                                </div>
+                            </div>
+                            <div class="study__weeks__item2">
+                                <div class="week__item2">
+                                    Неделя №2
+                                </div>
+                                <span class="week__line2"></span>
+                                <div class="week__desc">
+                                    Красивая часть курса,
+                                    которая помогает в успехе
+                                </div>
+                            </div>
+                            <div class="study__weeks__item1">
+                                <div class="week__item1">
+                                    Неделя №3
+                                </div>
+                                <span class="week__line1"></span>
+                                <div class="week__desc">
+                                    Красивая часть курса,
+                                    которая помогает в успехе
+                                </div>
+                            </div>
+                            <div class="study__weeks__item2">
+                                <div class="week__item2">
+                                    Неделя №4
+                                </div>
+                                <span class="week__line2"></span>
+                                <div class="week__desc">
+                                    Красивая часть курса,
+                                    которая помогает в успехе
+                                </div>
+                            </div>
+                            <div class="study__weeks__item1">
+                                <div class="week__item1">
+                                    Неделя №5
+                                </div>
+                                <span class="week__line1"></span>
+                                <div class="week__desc">
+                                    Красивая часть курса,
+                                    которая помогает в успехе
+                                </div>
+                            </div>
+                            <div class="study__weeks__item2">
+                                <div class="week__item2">
+                                    Неделя №6
+                                </div>
+                                <span class="week__line2"></span>
+                                <div class="week__desc">
+                                    Красивая часть курса,
+                                    которая помогает в успехе
+                                </div>
+                            </div>
+                            <div class="study__weeks__item1">
+                                <div class="week__item1">
+                                    Неделя №7
+                                </div>
+                                <span class="week__line1"></span>
+                                <div class="week__desc">
+                                    Красивая часть курса,
+                                    которая помогает в успехе
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="teachers moveToMail">
+                    <div class="teachers__main">
+                        <div class="teacher__ellipse">
+                            <img src="./img/Ellipse4.png" alt="">
+                        </div>
+                        <div class="teachers__title">
+                            <h3>Ваши преподаватели</h3>
+                        </div>    
+                    </div>
+                    <div class="teachers__name__col">
+                        <div class="teachers__item">
+                            <div class="teachers__photo">
+                                <img src="./img/teacher1.png" alt="">
+                            </div>
+                            <div class="teachers__name">
+                                <h3>Дмитрий Иванов</h3>
+                            </div>
+                            <div class="teachers__job">
+                                <span>Специалист по видеокартам</span>
+                            </div>
+                            <div class="teachers__btn">
+                                <button class="teach__btn" >Биография</button>
+                            </div>
+                            <div class="teach__text__con">
+                                <p class="teach__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vitae, recusandae ullam quae autem at.</p>
+                            </div>
+                        </div>
+                        <div class="teachers__item">
+                            <div class="teachers__photo">
+                                <img src="./img/teacher2.png" alt="">
+                            </div>
+                            <div class="teachers__name">
+                                <h3>Дмитрий Иванов</h3>
+                            </div>
+                            <div class="teachers__job">
+                                <span>Специалист по видеокартам</span>
+                            </div>
+                            <div class="teachers__btn">
+                                <button class="teach__btn" >Биография</button>
+                            </div>
+                            <div class="teach__text__con">
+                                <p class="teach__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vitae, recusandae ullam quae autem at.</p>
+                            </div>
+                        </div>
+                        <div class="teachers__item">
+                            <div class="teachers__photo">
+                                <img src="./img/teacher3.png" alt="">
+                            </div>
+                            <div class="teachers__name">
+                                <h3>Дмитрий Иванов</h3>
+                            </div>
+                            <div class="teachers__job">
+                                <span>Специалист по видеокартам</span>
+                            </div>
+                            <div class="teachers__btn">
+                                <button class="teach__btn" >Биография</button>
+                            </div>
+                            <div class="teach__text__con">
+                                <p class="teach__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vitae, recusandae ullam quae autem at.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer moveToContacts">
+                    <div class="footer__main">
+                        <div class="footer__title">
+                            <h3>Статьи каждую неделю</h3>
+                        </div>
+                        <div class="footer__subtitle">
+                            <div>Больше 90% учеников прошли полный курс и смогли собрать свой первый компьютер</div>
+                        </div>
+                        <div class="footer-hide">
+                            <p class="hidden-thank"></p>
+                        </div>
+                        <div class="footer__input">
+                            <input type="email" class="input__email" placeholder="Email">
+                            <button class="footer__btn" type="submit">Подписаться</button>
+                        </div>
+                        <div class="footer__social__col">
+                            <ul class="footer__social__body">
+                               <li class="footer__social__item" > <a href="#"><img src="./img/facebook.png" alt=""></a></li> 
+                               <li class="footer__social__item" > <a href="#"><img src="./img/instagram.png" alt=""></a></li> 
+                               <li class="footer__social__item" > <a href="#"><img src="./img/youtube.png" alt=""></a></li> 
+                               <li class="footer__social__item" > <a href="#"><img src="./img/vk.png" alt=""></a></li> 
+                            </ul>
+                        </div>
+                        <div class="footer__bottom">
+                            <div class="footer__right">All rights reserved <span id="footer-year"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./script JS/script.js"></script>
+</body>
+</html>
